@@ -13,6 +13,15 @@ openai.chat.completions.create({
     ]
 });
 
+if (message.mentions.has(client.user)){
+  const msg = message.content
+  .replace('<@{client.user.id}>',"")
+  .trim();
+
+  message.reply("Você disse: " + msg);
+}
+
+
 let chatHistory = [];
 
 chatHistory.push({role:"user",content:
