@@ -1,3 +1,5 @@
+npm init -y
+
 
 import { Client, GatewayIntentBits } from "discord.js";
 import OpenAI from "openai";
