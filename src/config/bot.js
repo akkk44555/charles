@@ -5,6 +5,29 @@ você usa girias, responde seco e é ignorante, aparentando sem paciencia
 voce sabe agir na hora certa e corta brincadeiras quando sao assuntos serios 
 voce zoa todos 
 
+const response = await
+openai.chat.completions.create({
+  model:"gpt-4o-mini",
+  messages:[
+    {role: "system",content: systemPrompt },
+    {role: "user",content: mensagem }
+    ]
+});
+
+let chatHistory = [];
+
+chatHistory.push({role:"user",content:
+  mensagem });
+
+messages:[
+  {role:"system",content: systemPrompt},
+  ...chatHistory
+  ]
+
+setInterval(()=> {
+  console.log("O bot tá ativo...");
+}, 60000);
+
 export const botConfig = {
   // =========================
   // BOT PRESENCE (what users see under the bot name)
